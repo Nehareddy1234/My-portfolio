@@ -24,6 +24,7 @@
             --bg-image: linear-gradient(to bottom, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.7)), url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop');
             --header-text: #e2eafc;
             --footer-text: #e2eafc;
+            --section-padding: 100px 20px;
         }
 
         /* Light mode variables */
@@ -58,9 +59,6 @@
             line-height: 1.6;
             overflow-x: hidden;
             padding-top: 80px;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
             transition: background-color 0.5s ease, color 0.5s ease;
         }
 
@@ -243,29 +241,20 @@
 
         /* Main Content */
         main {
-            flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-        /* Sections - Centered Content */
+        /* Sections - Full Page */
         section {
-            display: none;
-            padding: 100px 20px;
+            min-height: 100vh;
+            padding: var(--section-padding);
             text-align: center;
-            min-height: calc(100vh - 80px);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-        }
-
-        #home {
-            display: flex;
-            opacity: 1;
-            transform: translateY(0);
+            position: relative;
         }
 
         .homecontainer {
@@ -278,7 +267,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            animation: fadeIn 1s ease-out;
         }
 
         .home-content {
@@ -426,6 +414,7 @@
         #about .about-content {
             max-width: 800px;
             text-align: center;
+            margin: 0 auto;
         }
 
         #about p {
@@ -439,6 +428,7 @@
             position: relative;
             max-width: 800px;
             margin: 40px auto;
+            padding: 0 20px;
         }
 
         .timeline::before {
@@ -537,7 +527,6 @@
             gap: 30px;
             margin: 40px 0;
             width: 100%;
-            perspective: 1000px;
         }
 
         .skill-category {
@@ -581,7 +570,6 @@
             transition: var(--transition);
             border: 1px solid rgba(72, 149, 239, 0.3);
             box-shadow: var(--shadow);
-            transform-style: preserve-3d;
             position: relative;
             overflow: hidden;
         }
@@ -607,7 +595,6 @@
             border: 1px solid rgba(72, 149, 239, 0.3);
             box-shadow: var(--shadow);
             text-align: left;
-            transform-style: preserve-3d;
         }
 
         body.light-mode .project-card {
@@ -624,7 +611,6 @@
             filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
         }
 
-        /* Remove blue lines under language and project names */
         .language-card h3,
         .project-card h3 {
             border-bottom: none !important;
@@ -700,6 +686,7 @@
             flex-direction: column;
             justify-content: center;
             color: var(--text-light);
+            flex: 1;
         }
 
         .project-card h3 {
@@ -751,11 +738,13 @@
             gap: 50px;
             width: 100%;
             max-width: 1200px;
+            margin: 0 auto;
         }
 
         .contact-info {
             flex: 1;
             min-width: 300px;
+            max-width: 500px;
             text-align: left;
         }
 
@@ -918,42 +907,19 @@
         }
 
         /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes blinkCursor {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--accent); }
         }
 
-        @keyframes fadeOut {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(20px); }
+        .pulse {
+            animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
-        }
-
-        @keyframes blinkCursor {
-            from, to { border-color: transparent; }
-            50% { border-color: var(--accent); }
-        }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        .fade-out {
-            animation: fadeOut 0.6s ease-in forwards;
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
         }
 
         /* Form Status Message */
@@ -1022,9 +988,25 @@
                 right: auto;
                 left: 21px;
             }
+
+            .project-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project-card img {
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
         }
 
         @media (max-width: 768px) {
+            :root {
+                --section-padding: 80px 20px;
+            }
+
             header h1 {
                 font-size: 1.8em;
             }
@@ -1060,22 +1042,6 @@
                 font-size: 2.8rem;
             }
             
-            .project-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .project-card img {
-                margin-bottom: 20px;
-                width: 100%;
-                max-width: 300px;
-                height: auto;
-            }
-            
-            section {
-                padding: 80px 20px;
-            }
-            
             .contact-container {
                 flex-direction: column;
                 align-items: center;
@@ -1088,6 +1054,10 @@
         }
 
         @media (max-width: 480px) {
+            :root {
+                --section-padding: 60px 20px;
+            }
+
             header {
                 padding: 10px 0;
             }
@@ -1158,10 +1128,10 @@
             <h1>Neha Reddy Kadiri</h1>
             <nav>
                 <ul>
-                    <li class="active"><a onclick="showSection('home')">Home</a></li>
-                    <li><a onclick="showSection('about')">Journey</a></li>
-                    <li><a onclick="showSection('projects')">Expertise</a></li>
-                    <li><a onclick="showSection('contact')">Connect</a></li>
+                    <li class="active"><a onclick="scrollToSection('home')">Home</a></li>
+                    <li><a onclick="scrollToSection('about')">Journey</a></li>
+                    <li><a onclick="scrollToSection('projects')">Expertise</a></li>
+                    <li><a onclick="scrollToSection('contact')">Connect</a></li>
                 </ul>
             </nav>
         </div>
@@ -1178,8 +1148,8 @@
                         </div>
                         <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">I'm a passionate developer and computer science student dedicated to crafting elegant solutions to complex problems. My work bridges the gap between technology and human needs.</p>
                         <div style="display: flex; gap: 20px; justify-content: center;">
-                            <a onclick="showSection('projects')" class="btn pulse">Explore My Work</a>
-                            <a onclick="showSection('contact')" class="btn" style="background: transparent; border: 2px solid var(--accent);">Let's Talk</a>
+                            <a onclick="scrollToSection('projects')" class="btn pulse">Explore My Work</a>
+                            <a onclick="scrollToSection('contact')" class="btn" style="background: transparent; border: 2px solid var(--accent);">Let's Talk</a>
                         </div>
                     </div>
                     <div class="home-image">
@@ -1202,6 +1172,14 @@
                 
                 <h2 style="margin-top: 60px;">Education & Experience</h2>
                 <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025-May-June</div>
+                            <h3>PramahaSoft Pvt Ltd</h3>
+                            <p>Internship</p>
+                            <p>Completed an internship on RAD tools and ERP systems, gaining hands-on experience developing applications using Infor LN and understanding core business workflows in finance, supply chain, and manufacturing.</p>
+                        </div>
+                    </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <div class="timeline-date">2023 - Present</div>
@@ -1464,61 +1442,6 @@
         // Start typing animation
         setTimeout(type, 1000);
     
-        // Show home section by default
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('home').style.display = 'flex';
-            document.getElementById('home').style.opacity = '1';
-            document.getElementById('home').style.transform = 'translateY(0)';
-            
-            // Create floating particles
-            createParticles();
-            
-            // Initialize theme from localStorage
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            setTheme(savedTheme);
-        });
-    
-        function showSection(sectionId) {
-            let sections = document.querySelectorAll("section");
-            let navItems = document.querySelectorAll("nav ul li");
-            
-            // Update active nav item
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.querySelector('a').getAttribute('onclick').includes(sectionId)) {
-                    item.classList.add('active');
-                }
-            });
-            
-            // Show/hide sections with animation
-            sections.forEach(section => {
-                if (section.id === sectionId) {
-                    section.style.display = "flex";
-                    setTimeout(() => {
-                        section.style.opacity = "1";
-                        section.style.transform = "translateY(0)";
-                    }, 10);
-                } else {
-                    section.style.opacity = "0";
-                    section.style.transform = "translateY(20px)";
-                    setTimeout(() => {
-                        section.style.display = "none";
-                    }, 500);
-                }
-            });
-            
-            // Smooth scroll to top when changing sections
-            scrollToTop();
-        }
-        
-        // Scroll to top function
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        
         // Create floating particles
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
@@ -1634,27 +1557,61 @@
             document.head.appendChild(script);
         })();
     
-        // Add intersection observer for scroll animations
+        // Scroll to section function
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                window.scrollTo({
+                    top: section.offsetTop - 80, // Adjust for header height
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Initialize theme from localStorage
         document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
+            createParticles();
             
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = "1";
-                        entry.target.style.transform = "translateY(0)";
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            setTheme(savedTheme);
+            
+            // Set up nav highlighting based on scroll position
+            setupNavHighlighting();
+        });
+        
+        // Set up nav highlighting based on scroll position
+        function setupNavHighlighting() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
                     }
                 });
-            }, {
-                threshold: 0.1
+                
+                navLinks.forEach(link => {
+                    link.parentElement.classList.remove('active');
+                    if (link.getAttribute('onclick').includes(current)) {
+                        link.parentElement.classList.add('active');
+                    }
+                });
             });
-            
-            sections.forEach(section => {
-                if (section.id !== 'home') {
-                    observer.observe(section);
-                }
-            });
-        });
+        }
     </script>
 </body>
 </html>
