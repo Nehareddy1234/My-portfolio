@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neha Reddy Kadiri | Tech Innovator & Developer</title>
+    <title>Kadiri Neha Reddy | AI/ML & Full-Stack Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -703,6 +703,13 @@
             margin-bottom: 15px;
         }
 
+        .project-card-content p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
@@ -722,6 +729,65 @@
         .project-card:hover .project-tag {
             background: rgba(102, 140, 182, 0.4);
             transform: translateY(-2px);
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .project-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            border: 1px solid rgba(72, 149, 239, 0.45);
+            border-radius: 20px;
+            padding: 7px 14px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .project-links a:hover {
+            color: white;
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 30px;
+        }
+
+        .credential-card {
+            background: rgba(67, 97, 238, 0.1);
+            border: 1px solid rgba(72, 149, 239, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            transition: var(--transition);
+        }
+
+        .credential-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            background: rgba(72, 149, 239, 0.2);
+        }
+
+        .credential-card h3 {
+            color: var(--success);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .credential-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Contact Section */
@@ -1142,11 +1208,11 @@
             <div class="homecontainer">
                 <div class="home-content">
                     <div class="home-text">
-                        <h2 style="font-size: 3rem; margin-bottom: 20px;">Innovating Through Code</h2>
+                        <h2 style="font-size: 3rem; margin-bottom: 20px;">AI/ML & Full-Stack Developer</h2>
                         <div class="typing-container">
                             <p class="typing-text" id="typing-text"></p>
                         </div>
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">I'm a passionate developer and computer science student dedicated to crafting elegant solutions to complex problems. My work bridges the gap between technology and human needs.</p>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">I'm Kadiri Neha Reddy, a B.Tech CSE (AI/ML) student at VIT Chennai building practical AI, machine learning, and full-stack products across healthcare, voice interfaces, developer tools, and enterprise workflows.</p>
                         <div style="display: flex; gap: 20px; justify-content: center;">
                             <a onclick="scrollToSection('projects')" class="btn pulse">Explore My Work</a>
                             <a onclick="scrollToSection('contact')" class="btn" style="background: transparent; border: 2px solid var(--accent);">Let's Talk</a>
@@ -1162,46 +1228,46 @@
         <section id="about">
             <div class="container">
                 <h2>My Journey</h2>
-                <p class="subtitle">From curious student to aspiring tech innovator - my path in computer science</p>
+                <p class="subtitle">Computer science student focused on AI, machine learning, full-stack engineering, and human-centered product experiences</p>
                 
                 <div class="about-content">
-                    <p>Hello! I'm Neha Reddy, a passionate technologist currently pursuing my Bachelor of Technology in Computer Science at Vellore Institute of Technology, Chennai. My journey in technology began with a deep fascination for how software can transform ideas into reality and solve real-world problems.</p>
-                    <p>What drives me is the endless potential of technology to create meaningful impact. I specialize in full-stack development with a growing expertise in artificial intelligence. My approach combines technical precision with creative problem-solving to build solutions that are both powerful and intuitive.</p>
-                    <p>Beyond coding, I'm an avid learner constantly expanding my knowledge through personal projects, tech communities, and exploring emerging technologies. My goal is to become a software engineer who not only builds excellent products but also contributes to advancing the field through innovation.</p>
+                    <p>Hello! I'm Neha Reddy, currently pursuing B.Tech Computer Science Engineering with an AI/ML specialization at Vellore Institute of Technology, Chennai. I enjoy turning ideas into complete products, from data analysis and model training to responsive web interfaces and deployment-ready workflows.</p>
+                    <p>My technical work spans Python, Java, C/C++, SQL, PostgreSQL, React.js, Flask, TensorFlow, NLP, time-series analysis, data visualization, and MERN-stack development. I like projects where AI is connected to a useful interface, whether that means clinical decision support, voice-controlled coding, floor-plan intelligence, or smart IoT systems.</p>
+                    <p>Alongside technical projects, I bring event leadership and team coordination experience from cultural and literary activities, which has strengthened how I communicate, plan, and execute in collaborative environments.</p>
                 </div>
                 
                 <h2 style="margin-top: 60px;">Education & Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <div class="timeline-date">2023 - Present</div>
-                            <h3>Vellore Institute of Technology, Chennai</h3>
-                            <p>Bachelor of Technology in Computer Science</p>
-                            <p>Currently pursuing my degree with a focus on software development and AI technologies.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">2025-May-June</div>
+                            <div class="timeline-date">May 2025 - June 2025</div>
                             <h3>PramahaSoft Pvt Ltd</h3>
-                            <p>Internship</p>
+                            <p>Intern - RAD Tools & ERP Systems</p>
                             <p>Completed an internship on RAD tools and ERP systems, gaining hands-on experience developing applications using Infor LN and understanding core business workflows in finance, supply chain, and manufacturing.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <div class="timeline-date">2021 - 2023</div>
-                            <h3>Sri Chaitanya Techno School</h3>
-                            <p>Senior Secondary Education</p>
-                            <p>Completed with distinction, laying the foundation for my technical education.</p>
+                            <div class="timeline-date">2023 - Present</div>
+                            <h3>Vellore Institute of Technology, Chennai</h3>
+                            <p>B.Tech CSE (AI/ML)</p>
+                            <p>Coursework includes Data Structures & Algorithms, Database Management Systems, Machine Learning, and Web Development. Current CGPA: 8.57.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <div class="timeline-date">Ongoing</div>
-                            <h3>Self-Directed Learning</h3>
-                            <p>Continuous Skill Development</p>
-                            <p>Regularly undertaking online courses and personal projects to stay at the forefront of technology.</p>
+                            <div class="timeline-date">Leadership</div>
+                            <h3>Event Management</h3>
+                            <p>Telugu Literary Club & Dance Event Coordination</p>
+                            <p>Organized cultural and literary events, managed team operations, and coordinated event execution across planning and delivery.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">Certifications</div>
+                            <h3>Continuous Learning</h3>
+                            <p>Deloitte Data Analysis, Deloitte Cybersecurity, NPTEL Conservation Ecology</p>
+                            <p>Building breadth across analytics, security awareness, and interdisciplinary problem-solving.</p>
                         </div>
                     </div>
                 </div>
@@ -1211,36 +1277,36 @@
         <section id="projects">
             <div class="container">
                 <h1>My Expertise</h1>
-                <p class="subtitle">Technologies I've mastered and projects I've brought to life</p>
+                <p class="subtitle">Resume-backed skills and current GitHub projects updated from public repositories</p>
                 
                 <div class="skill-category">
                     <h3>Technical Skills</h3>
                     <div class="skills-container">
                         <div class="language-card">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-                            <h3>HTML5</h3>
-                            <div class="star-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="language-card">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-                            <h3>CSS3</h3>
-                            <div class="star-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="language-card">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
                             <h3>Python</h3>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="language-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                            <h3>React.js</h3>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="language-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <h3>JavaScript</h3>
                             <div class="star-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1271,6 +1337,28 @@
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
                         </div>
+                        <div class="language-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                            <h3>SQL/PostgreSQL</h3>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="language-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                            <h3>AI/ML</h3>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -1278,55 +1366,130 @@
                     <h3>Notable Projects</h3>
                     <div class="project-cards-container">
                         <div class="project-card">
-                            <img src="smart ref.png" alt="Smart Refrigerator">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2070&auto=format&fit=crop" alt="VoxCoder voice coding interface">
                             <div class="project-card-content">
-                                <h3>Smart Refrigerator System</h3>
-                                <h4>An intelligent refrigerator that automatically detects items inside and suggests recipes based on available ingredients. Utilizes computer vision for item recognition and machine learning for personalized recipe recommendations.</h4>
+                                <h3>VoxCoder</h3>
+                                <h4>Voice-to-code IDE for writing, running, debugging, and practicing code through spoken instructions.</h4>
+                                <p>Built as a full-stack developer tool using Next.js, Flask, Whisper speech recognition, LLM-based code generation, CodeMirror, multi-language execution, and practice workflows.</p>
                                 <div class="project-tags">
-                                    <span class="project-tag">Computer Vision</span>
-                                    <span class="project-tag">Machine Learning</span>
-                                    <span class="project-tag">IoT</span>
+                                    <span class="project-tag">Next.js</span>
+                                    <span class="project-tag">Flask</span>
+                                    <span class="project-tag">Whisper</span>
+                                    <span class="project-tag">LLMs</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Nehareddy1234/VoxCoder" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="project-card">
-                            <img src="wearable.jpg" alt="Wearable Devices">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1974&auto=format&fit=crop" alt="Sepsis prediction dashboard">
                             <div class="project-card-content">
-                                <h3>Healthcare Wearable System</h3>
-                                <h4>A comprehensive health monitoring wearable that tracks vital signs including heart rate, blood pressure, and temperature using multiple sensors. Features real-time alerts and data visualization through a companion mobile application.</h4>
-                                <div class="project-tags">
-                                    <span class="project-tag">Arduino</span>
-                                    <span class="project-tag">Sensor Fusion</span>
-                                    <span class="project-tag">Mobile Integration</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=2013&auto=format&fit=crop" alt="Weather Prediction">
-                            <div class="project-card-content">
-                                <h3>Advanced Weather Prediction</h3>
-                                <h4>A machine learning model that analyzes historical and real-time weather data to provide accurate forecasts. Incorporates multiple data sources and uses ensemble methods to improve prediction accuracy.</h4>
+                                <h3>Explainable Early Sepsis Prediction</h3>
+                                <h4>Clinical decision-support dashboard that predicts sepsis risk and explains model outputs for ICU patient data.</h4>
+                                <p>Combines machine learning, SHAP explainability, counterfactual risk reduction, clinical rule interpretation, future-risk forecasting, alerts, and PDF report generation.</p>
                                 <div class="project-tags">
                                     <span class="project-tag">Python</span>
-                                    <span class="project-tag">Machine Learning</span>
-                                    <span class="project-tag">Data Analysis</span>
+                                    <span class="project-tag">XGBoost</span>
+                                    <span class="project-tag">SHAP</span>
+                                    <span class="project-tag">Healthcare AI</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Nehareddy1234/Sepsis" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="project-card">
-                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop" alt="Stock Market Prediction">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" alt="DebateMate AI coach">
                             <div class="project-card-content">
-                                <h3>Stock Market Analyzer</h3>
-                                <h4>A comprehensive tool that processes historical stock data to identify patterns and predict future trends. Features sentiment analysis of news articles and social media to provide a holistic market view.</h4>
+                                <h3>DebateMate</h3>
+                                <h4>Real-time voice-to-voice AI debate coach for practicing arguments with live feedback.</h4>
+                                <p>Uses React, FastAPI, LangGraph, WebSockets, GPT models, real-time transcription, text-to-speech, argument summarization, and a 3D visualizer.</p>
                                 <div class="project-tags">
-                                    <span class="project-tag">Time Series Analysis</span>
-                                    <span class="project-tag">Natural Language Processing</span>
-                                    <span class="project-tag">Data Visualization</span>
+                                    <span class="project-tag">LangGraph</span>
+                                    <span class="project-tag">FastAPI</span>
+                                    <span class="project-tag">WebSockets</span>
+                                    <span class="project-tag">Three.js</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Nehareddy1234/DebateMate" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="VaastuGen floor plan analysis">
+                            <div class="project-card-content">
+                                <h3>VaastuGen</h3>
+                                <h4>AI-driven floor-plan analysis system that scores and optimizes layouts using computer vision and spatial reasoning.</h4>
+                                <p>Designed to inspect floor plans, identify spatial patterns, and suggest improvements through rule-based AI, optimization logic, and vision workflows.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Computer Vision</span>
+                                    <span class="project-tag">Rule-Based AI</span>
+                                    <span class="project-tag">Optimization</span>
+                                    <span class="project-tag">Python</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Nehareddy1234/VaastuGen" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop" alt="PhotoVault AI gallery">
+                            <div class="project-card-content">
+                                <h3>PhotoVault</h3>
+                                <h4>Smart photo gallery with natural-language AI search and secure cloud storage.</h4>
+                                <p>Built with React, AWS Amplify, Cognito authentication, S3 storage, Lambda, API Gateway, Secrets Manager, and a Claude-powered search backend.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">React</span>
+                                    <span class="project-tag">AWS Amplify</span>
+                                    <span class="project-tag">Lambda</span>
+                                    <span class="project-tag">AI Search</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Nehareddy1234/PhotoVault" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=2068&auto=format&fit=crop" alt="Kitchen recipe app">
+                            <div class="project-card-content">
+                                <h3>Kitchen</h3>
+                                <h4>React/Vite web app hosted on Vercel for a kitchen and recipe-focused user experience.</h4>
+                                <p>Recent JavaScript project from GitHub with a live deployment, showing front-end product development and fast iteration with modern React tooling.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">React</span>
+                                    <span class="project-tag">Vite</span>
+                                    <span class="project-tag">JavaScript</span>
+                                    <span class="project-tag">Vercel</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/Nehareddy1234/Kitchen" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                    <a href="https://nehaskitchen.vercel.app" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i> Live Site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Core Competencies</h3>
+                    <div class="credentials-grid">
+                        <div class="credential-card">
+                            <h3>AI & Data</h3>
+                            <p>Machine learning, NLP, time-series analysis, TensorFlow, SHAP explainability, and data visualization.</p>
+                        </div>
+                        <div class="credential-card">
+                            <h3>Full-Stack Development</h3>
+                            <p>HTML, CSS, JavaScript, React.js, MERN stack, Flask, SQL, PostgreSQL, and deployment-focused workflows.</p>
+                        </div>
+                        <div class="credential-card">
+                            <h3>Enterprise Systems</h3>
+                            <p>RAD tools, Infor LN ERP, and business workflows across finance, supply chain, and manufacturing.</p>
                         </div>
                     </div>
                 </div>
@@ -1340,12 +1503,16 @@
                 
                 <div class="contact-container">
                     <div class="contact-info">
-                        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">Whether you're looking to collaborate on an exciting project, have questions about my work, or just want to say hello, feel free to reach out. I'm always open to new opportunities and interesting conversations about technology and innovation.</p>
+                        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">I'm open to software engineering internships, AI/ML projects, full-stack development work, and collaborations where thoughtful engineering can solve practical problems.</p>
                         
                         <div style="margin-bottom: 30px;">
                             <p style="font-size: 1.1rem; margin-bottom: 15px;">
                                 <i class="fas fa-envelope" style="color: var(--accent); margin-right: 10px;"></i> 
                                 <a href="mailto:nehareddy1104@gmail.com">nehareddy1104@gmail.com</a>
+                            </p>
+                            <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                                <i class="fas fa-phone" style="color: var(--accent); margin-right: 10px;"></i> 
+                                <a href="tel:+919398842118">+91 93988 42118</a>
                             </p>
                             <p style="font-size: 1.1rem; margin-bottom: 15px;">
                                 <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i> 
@@ -1360,8 +1527,7 @@
                         <h3 style="font-size: 1.3rem; color: var(--accent); margin-bottom: 15px;">Find Me On</h3>
                         <div class="social-links">
                             <a href="https://github.com/Nehareddy1234" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/neha-reddy-kadiri-1011a0289" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                     
@@ -1393,7 +1559,7 @@
     <footer>
         <div class="container">
             <p>Designed & Built with <i class="fas fa-heart" style="color: var(--warning);"></i> by Neha Reddy Kadiri</p>
-            <p>&copy; 2025 All Rights Reserved</p>
+            <p>&copy; 2026 All Rights Reserved</p>
             <a href="#" class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
@@ -1402,10 +1568,10 @@
         // Typing Animation
         const typingText = document.getElementById('typing-text');
         const phrases = [
-            "Building the future with code...",
-            "Solving problems creatively...", 
-            "Transforming ideas into reality...",
-            "Passionate about technology..."
+            "Building AI-powered products...",
+            "Designing full-stack experiences...", 
+            "Turning data into decisions...",
+            "Solving practical problems with code..."
         ];
         let phraseIndex = 0;
         let charIndex = 0;
@@ -1615,4 +1781,3 @@
     </script>
 </body>
 </html>
-
